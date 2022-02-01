@@ -1,10 +1,8 @@
-from tokenize import Number
-
-
 def Convert(string):
     list_1 = []
     list_1[:0] = string
     return list_1
+
 message = 0
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 alphabet = Convert(alphabet)
@@ -25,13 +23,15 @@ if cipher == 'encrypt':
     key = 0
     while key < 10 and key > 0:
         key = input('Key: ')
+
 elif cipher == 'decrypt':
-    m_int = False
-    while m_int == False:
+    m_int = True
+    while m_int == True:
         message = input('Message: ')
         try:
             m = int(message)
             m_int = True
+            break
         except:
             print('Input numbers')
             m_int = False
@@ -39,5 +39,6 @@ elif cipher == 'decrypt':
     key = 0
     while key < 10 and key > 0:
         key = input('Key:')
+
 else:
     print('Inputted value is invalid... \nTry again...')
